@@ -1,3 +1,82 @@
-h1 {
-    color: rgb(101, 167, 104)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-fixed-header {
+    max-width: 1024px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    color: #093b18;
+    background-color: #d8d8d8;
+}
+
+.main-container {
+    max-width: 1024px;
+    margin: 100px auto 0;
+}
+
+.grid-row {
+    width: 100%;
+    display: grid;
+    margin-bottom: 20px;
+    grid-column-gap: 20px;
+}
+
+.two-columns {   
+    grid-template-columns: 1fr 1fr;
+}
+
+.three-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.big-section {
+    width: 100%;
+    height: 300px;
+    margin-right: 20px;
+    background-color: #d8d8d8;    
+}
+
+.small-section {
+    width: 100%;
+    height: 120px;
+    margin-right: 20px;
+    background-color: #d8d8d8;
+}
+
+.big-section:last-child, .small-section:last-child {
+    margin-right: 0;
+}
+
+.special-footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8d8d8;
+}
+
+.pretty-figure {
+    width: 150px;
+    height: 150px;
+    background-color: #4e3c50
+}
+
+@media (max-width: 500px) {
+    .two-columns, .three-columns {
+        grid-template-columns: 1fr;
+    }
+    .big-section, .small-section {
+        margin: 0 0 20px;
+    }
 }
